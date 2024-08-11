@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<div class="container">
+        <header>
+            <div class="header">
+                <div class="left">Matrix</div>
+            </div>
+
+            <div class="right">
+                <nav class="navbar">
+                    <ul>
+                        <div><button onclick="myFunction()" class="dropbtn" id="menubtn">Menu</button>
+                            <div id="myDropdown" class="dropdown-content">
+                             {%block content %}
+                                <!-- <li><a href="#" class="active"></a></li> -->
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="{{ url_for('service')}}">Service</a></li>
+                                <li><a href="{{ url_for('about')}}">About Us</a></li>
+                                <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+                            {% endblock %}
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div id="right1">
+              <form action="{{ url_for('predict')}}"method="post">
+                        <a href=""><button id="GSButton">GET Started</button></a>
+              </form>
+            </div>
+    </div>
+    </header>
+    <main>
+        <div id="main01"><strong>Unlocking Your Potential:</strong></div>
+        <div id="main02"> <strong>Analyse to Optimize, Grind to Shine!</strong> </div>
+        <div id="main03"> We Analyse your information and Guide you for Good Placements </div>
+        <div id="main04">
+              <form action="{{ url_for('predict')}}"method="post">
+                        <a href=""><button id="GSButton">GET Started</button></a>
+           </form>
+        </div>
+        <div id="main05"><img src='static\matrix1.png' alt=""></div>
+        <div id="main06"><img src='static\matrix2.png'  alt=""></div>
+        <div id="main07"><img src='static\matrix7.png'  alt=""></div>
+        <div id="main08"><img src='static\matrix4.png'  alt="" height="200px" width="350px"></div>
+        <div id="main09"><img src='static\matrix5.png' alt=""></div>
+        <div class="login">
+   <br>
+   <br>
+        </div>
+            </form>
+    </main>
+
+    <footer>
+    <div class="footer-clean">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">MATRIX © 2023</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </footer>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color:bisque;
+        height: 900px;
+        font-family: 'Poppins',sans-serif;
+    }
+    .header {
+        height: 90px;
+        background-color: #201C3C;
+    }
+
+    .left {
+        color: aliceblue;
+        font-size: 30px;
+        position: absolute;
+        left: 20px;
+        top: 30px;
+    }
+
+    .right {
+        position: absolute;
+        top: -10px;
+        left: 735px;
+    }
+
+    .navbar ul {
+        overflow: auto;
+    }
+
+    .navbar li {
+        float: left;
+        list-style: none;
+        margin: 13px 20px;
+        font-size: 20px;
+
+    }
+
+    .navbar li a {
+        padding: 13px 13px;
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .navbar li a:hover {
+        color: white;
+        background-color: #EB843A;
+        border-radius: 30px;
+    }
+
+    .dropbtn {
+        visibility: collapse;
+    }
+
+    #right1 {
+        position: absolute;
+        top: 20px;
+        left: 1355px;
+        border-radius: 30px;
+        background-color: #EB843A;
+        color: #F4F4F4;
+        padding: 13px 13px;
+        font-size: 20px;
+    }
+
+    #GSButton {
+        border: none;
+        text-decoration: none;
+        background-color: #EB843A;
+        cursor: pointer;
+    }
+
+    #main01 {
+        font-size: 50px;
+        position: absolute;
+        text-align: center;
+        top: 150px;
+        left: 460px;
+    }
+
+    #main02 {
+        font-size: 50px;
+        position: absolute;
+        text-align: center;
+        top: 230px;
+        left: 370px;
+    }
+
+    #main03 {
+        font-size: 25px;
+        position: absolute;
+        text-align: center;
+        top: 350px;
+        left: 420px;
+    }
+
+    #main04 {
+        position: absolute;
+        top: 420px;
+        left: 650px;
+        border-radius: 30px;
+        background-color: #EB843A;
+        color: #F4F4F4;
+        padding: 20px 20px;
+        font-size: 25px;
+    }
+
+    #GVButton {
+        border: none;
+        font-size: 20px;
+        text-decoration: none;
+        background-color: #EB843A;
+        cursor: pointer;
+    }
+
+    #main05 img {
+        height: 250px;
+        position: absolute;
+        top: 550px;
+        left: 530px;
+    }
+
+    #main06 img {
+        height: 250px;
+        position: absolute;
+        top: 450px;
+        left: 40px;
+    }
+
+    #main07 img {
+        height: 250px;
+        position: absolute;
+        top: 650px;
+        left: 1020px;
+    }
+
+    #main08 img {
+        height: 250px;
+        position: absolute;
+        top: 320px;
+        left: 1120px;
+    }
+
+    #main09 img {
+        /* height: 250px;
+        width: px; */
+        position: absolute;
+        top: 100px;
+        left: 20px;
+    }
+    .login{
+        position: absolute;
+    top: 80%;
+        left: 30%;
+    }
+</style>
+</body>
+</html>

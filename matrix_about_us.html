@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 100px;
+        margin: 0px;
+        padding: 0px;
+        font-family:'Poppins',sans-serif;
+        background:bisque;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+    .first img {
+        border-radius: 42px;
+        /* filter: invert(100%); */
+    }
+
+    .fifth {
+        height: 175px;
+        width: 100%;
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        /* justify-content: space-around; 
+        justify-content: space-between; */
+        /* transition: all ease-in-out 4s; */
+    }
+
+    .fifth_names {
+        text-align: center;
+        font-size: 23px;
+    }
+
+    /* span {
+        font-size: 45px;
+        border: 2px solid green;
+        margin: 20px;
+    } */
+    .item {
+        margin: 30px;
+        /* border:2px solid red; */
+        color: black;
+    }
+
+    .credit {
+        font-size: 23px;
+        text-align: center;
+        color: black;
+    }
+
+    .credits {
+        font-size: 36px;
+        text-align: center;
+        color: black;
+    }
+
+    #item1 {
+        display: block;
+        /* border: 2px solid red; */
+        text-align: center;
+        font-size: 45px;
+        color:black;
+        /* margin-left: 38%; */
+        /* height: 100px;
+        margin-bottom: 100px; */
+        /* margin-top: 50px;  */
+    }
+
+    #item2 {
+        display: block;
+        /* border: 2px solid red; */
+        font-size: 38px;
+        margin-left: 55%;
+        color: black;
+        /* height: 100px;
+        margin-bottom: 100px; */
+        /* margin-top: 50px;  */
+    }
+
+    #item3 {
+        font-size: 23px;
+        color: black;
+    }
+
+    #item4 {
+
+        font-size: 25px;
+        color: black;
+
+    }
+
+    #item5 {
+        font-size: 23px;
+        color: black;
+    }
+
+    #item6 {
+        font-size: 23px;
+        color:black;
+    }
+
+    #item7 {
+        /* display: inline; */
+        /* border:2px solid red; */
+        /* margin-left: 42%; */
+        text-align: center;
+        font-size: 50px;
+        color: black;
+    }
+
+    /* #item8 {
+        align-items: center;
+    } */
+
+    #item9 img:hover {
+        /* background-color: green; */
+        height: 250px;
+        width: 250px;
+        border-radius: 100px;
+
+        /* filter: invert(100%); */
+        /* font-size: 45px; */
+    }
+
+    #item10 img:hover {
+        /* background-color: green; */
+        height: 250px;
+        width: 250px;
+        border-radius: 100px;
+
+        /* filter: invert(100%); */
+        /* font-size: 45px; */
+    }
+
+    #item11 img:hover {
+        /* background-color: green; */
+        height: 250px;
+        width: 250px;
+        border-radius: 100px;
+
+        /* filter: invert(100%); */
+        /* font-size: 45px; */
+    }
+
+    #item12 img:hover {
+        /* background-color: green; */
+        height: 250px;
+        width: 250px;
+        border-radius: 100px;
+
+        /* filter: invert(100%); */
+        /* font-size: 45px; */
+    }
+
+    #item13 img:hover {
+        /* background-color: green; */
+        height: 250px;
+        width: 250px;
+        border-radius: 100px;
+
+        /* filter: invert(100%); */
+        /* font-size: 45px; */
+    }
+
+
+
+    /* @media (max-width: 1300px)  {
+            #flexbox img{
+                height: 150px;
+                width: 150px;
+
+            }
+        }
+
+        @media (max-width: 663px)  {
+            #flexbox img{
+                height: 100px;
+                width: 100px;
+
+            }
+        }
+
+        @media (max-width: 628px)  {
+            #flexbox img{
+                height: 75px;
+                width: 75px;
+
+            }
+        } */
+
+    @media (max-width: 768px) {
+        #item15 {
+            padding-top: 500px;
+        }
+    }
+
+    @media (max-width: 426px) {
+        #item15 {
+            padding-top: 1000px;
+        }
+    }
+
+    .header {
+        height: 90px;
+        background-color: #201C3C;
+    }
+
+    .left {
+        color: aliceblue;
+        font-size: 30px;
+        position: absolute;
+        left: 20px;
+        top: 30px;
+    }
+
+    .right {
+        position: absolute;
+        top: -10px;
+        left: 735px;
+    }
+
+    .navbar ul {
+        overflow: auto;
+    }
+
+    .navbar li {
+        float: left;
+        list-style: none;
+        margin: 13px 20px;
+        font-size: 20px;
+
+    }
+
+    .navbar li a {
+        padding: 13px 13px;
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .navbar li a:hover {
+        color: white;
+        background-color: #EB843A;
+        border-radius: 30px;
+    }
+
+    .dropbtn {
+        visibility: collapse;
+    }
+
+    #right1 {
+        position: absolute;
+        top: 20px;
+        left: 1355px;
+        border-radius: 30px;
+        background-color: #EB843A;
+        color: #F4F4F4;
+        padding: 13px 13px;
+        font-size: 20px;
+    }
+
+    #GSButton {
+        border: none;
+        text-decoration: none;
+        background-color: #EB843A;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header">
+                <div class="left">Matrix</div>
+            </div>
+
+            <div class="right">
+                <nav class="navbar">
+                    <ul>
+                        <div><button onclick="myFunction()" class="dropbtn" id="menubtn">Menu</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                {%block content %}
+                                <!-- <li><a href="#" class="active"></a></li> -->
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/">Services</a></li>
+                                <li><a href="/">About Us</a></li>
+                                <li><a href="matrix.html">Contact Us</a></li>
+                            {% endblock %}
+                               </div>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="right1">
+                <a href="{{url_for('service')}}"><button id="GSButton">GET Started</button></a>
+            </div>
+    </div>
+    </header>
+
+    <div id="item1"><strong>Matrix</strong></div>
+    <div id="item2">~Find Your Way</div>
+    </div>
+    <div class="second">
+        <div id="item3">Problem Statement :</div>
+        <div id="item4">
+            <p>In the rapidly evolving landscape of the contemporary employment market, achieving successful campus
+                placements has become a pivotal goal for both educational institutions and students. To address the
+                challenges posed by this competitive environment, there is a compelling need to harness the power of
+                data science and machine learning techniques.</p>
+        </div>
+    </div>
+    <div class="third">
+        <div id="item5">Our Solution :</div>
+        <div id="item6">
+            <ol>
+                <li>Effective campus placement is essential for educational institutions and students alike in the
+                    competitive employment market of today. </li>
+                <br>
+                <li>The idea is to use data science and machine learning, to analyse campus placement data and produce
+                    insightful findings.</li>
+                <br>
+                <li>With the help of this strategy, colleges and institutions may boost placement success rates and make
+                    well-informed selections.</li>
+                <br>
+            </ol>
+        </div>
+    </div>
+    <div class="fourth">
+        <div id="item7">Our Team </div>
+        <div id="item8">
+        </div>
+    </div>
+    <div class="fifth" id="flexbox">
+        <div class="item" id="item10"><a href="cyberpedia_contact_us.html"><img src='static\abhishek2.jpg'alt=""
+                    height="200px" width="200px"></a>
+            <div class="fifth_names">Abhishek Dixit</div>
+        </div>
+        <div class="item" id="item11"><a href="cyberpedia_contact_us.html"><img src='static\abhishek1.jpg' alt=""
+                    height="200px" width="200px"></a>
+            <div class="fifth_names">Abhishek Manglani</div>
+        </div>
+        <div class="item" id="item12"><a href="cyberpedia_contact_us.html"><img src='static\ashish.jpg' alt=""
+                    height="200px" width="200px"></a>
+            <div class="fifth_names">Ashish Dixit</div>
+        </div>
+        <div class="item" id="item13"><a href="cyberpedia_contact_us.html"><img src='static\naman.jpg'  alt=""
+                    height="200px" width="200px"></a>
+            <div class="fifth_names">Naman Jain</div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            // let btn = document.getElementById('btn');
+            let para1 = document.getElementById('myDropdown');
+            if (para1.style.display != 'block') {
+                para1.style.display = 'block';
+            }
+            else {
+                para1.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

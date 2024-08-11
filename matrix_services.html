@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+</head>
+<body>
+<div class="login">
+     <title>CAMPUS PLACEMENT ANALYSIS</title>
+	<h1>Campus Placement Analysis Prediction</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<p>Full Name</p>
+        <input type="text" name="Age" placeholder="Age" required="required" />
+        <p>Gender</p>
+        <input type="text" name="Gender" placeholder="Gender" required="required" />
+		<p>Stream</p>
+        <input type="text" name="Stream" placeholder="Stream" required="required" />
+		<p>Intership</p>
+        <input type="text" name="Intership" placeholder="Intership" required="required" />
+      	<p>CGPA</p>
+        <input type="text" name="CGPA " placeholder="CGPA" required="required" />
+       	<p>Backlog</p>
+        <input type="text" name="Backlog" placeholder="Backlog" required="required" />
+        <button type="sumbit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+</div>
+<style>
+    body {
+        margin: 0px;
+        font-family: "Trebuchet MS";
+        padding: 0px;
+        background:url("https://imgs.search.brave.com/QSBsEvc_ANwqtZiwojvP9mqSOiamNC787ZNSusNswaE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE0/NTY1MTMwODA1MTAt/N2JmM2E4NGI4MmY4/P2l4bGliPXJiLTQu/MC4zJml4aWQ9TTN3/eE1qQTNmREI4TUh4/elpXRnlZMmg4TVRK/OGZHSnZiMnR6ZkdW/dWZEQjhmREI4Zkh3/dyZ3PTEwMDAmcT04/MA");
+        background-size: cover;
+        background-color:bisque;
+        height: 120vh;
+    }
+
+    .right {
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        width: 100%;
+        background: black;
+    }
+
+    .navbar ul {
+        overflow: auto;
+    }
+
+    .navbar li {
+        float: left;
+        list-style:none;
+        margin: 13px 20px;
+        font-size: 20px;
+
+    }
+
+    .navbar li a {
+        padding: 10px 10px;
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .navbar li a:hover {
+        color: black;
+        background-color: whitesmoke;
+        border-radius: 30px;
+    }
+
+
+    .dropbtn {
+        visibility: collapse;
+    }
+
+    #right1 {
+        position: absolute;
+        top: 20px;
+        left: 1355px;
+        border-radius: 30px;
+        background-color: whitesmoke;
+        color: black;
+        padding: 13px 13px;
+        font-size: 20px;
+    }
+
+    #GSButton {
+        border: none;
+        border-color: whitesmoke;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .login{
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        width: 350px;
+    }
+    .login h1{
+        font-size: 30px;
+        text-transform: uppercase;
+        margin: 40px 0;
+    }
+    .login p{
+        font-size: 20px;
+        margin: 15px 0;
+    }
+    .login input{
+        font-size: 14px;
+        padding: 15px 10px;
+        width: 100%;
+        border: 0;
+        border-radius: 5px;
+        outline: none;
+    }
+.login button{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding:10px 15px;
+    width: 50%;
+    border:0;
+    border-radius: 5px;
+
+}
+</style>
+</body>
+</html>
